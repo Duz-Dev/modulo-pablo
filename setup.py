@@ -4,9 +4,9 @@ readme = open("./README.md", "r")
 
 
 setup(
-    name='pablo',
-    packages=['modulo-pablo'],  # this must be the same as the name above
-    version='0.1',
+    name='modulo_pablo',
+    packages=['modulo_pablo'],  # this must be the same as the name above
+    version='0.1.1',
     description='Esta es la descripcion de mi paquete',
     long_description=readme.read(),
     long_description_content_type='text/markdown',
