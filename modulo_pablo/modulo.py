@@ -1,18 +1,38 @@
-import requests
-import os
-import platform
-import subprocess
-from PIL import Image
-from io import BytesIO
+# modulo_pablo.py
 
 # URL de la imagen por default
-# url = "https://i.postimg.cc/906xxjJJ/rei-rei-ayanami.gif"
-url = "https://i.postimg.cc/YCWcC2zN/wallhaven-j5mj3w-1920x1080.png"
+_url = "https://i.postimg.cc/YCWcC2zN/wallhaven-j5mj3w-1920x1080.png"
 
-def saludar(name: str)-> str:
+def saludar(name: str) -> str:
+    """
+    Función para saludar al usuario.
+
+    Argumentos:
+    name -- nombre de la persona a saludar
+
+    Retorna:
+    Un mensaje de saludo.
+    """
     return f"Hola {name}, te brindo un saludo desde el modulo con el nombre '{__name__}'"
 
-def img_random(imagen_url: str = url) -> None:
+def img_random(imagen_url: str = _url) -> None:
+    """
+    Función para descargar y abrir una imagen desde una URL.
+
+    Argumentos:
+    imagen_url -- URL de la imagen a mostrar (opcional)
+
+    Este método descarga la imagen, la guarda localmente y la abre 
+    con el visor predeterminado del sistema operativo.
+    """
+    # Importar las librerías dentro de la función para evitar exponerlas
+    import requests
+    import os
+    import platform
+    import subprocess
+    from PIL import Image
+    from io import BytesIO
+
     # Descargar la imagen desde la URL
     respuesta = requests.get(imagen_url)
     
@@ -39,4 +59,3 @@ def img_random(imagen_url: str = url) -> None:
         subprocess.run(["xdg-open", nombre_archivo])
     else:
         print("Sistema operativo no soportado para abrir la imagen automáticamente.")
-

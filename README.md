@@ -42,11 +42,11 @@ print(saludo)
 ### Despedida
 
 ```python
-import modulo_pablo
+import modulo_pablo as mp
 
 # Despedida personalizada
 nombre = "Juan"
-despedida = modulo_pablo.despedir(nombre)
+despedida = mp.despedir(nombre)
 print(despedida)
 ```
 

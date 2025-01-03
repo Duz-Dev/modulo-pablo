@@ -1,20 +1,21 @@
 from setuptools import setup
 
-readme = open("./README.md", "r")
-
+# Asegúrate de abrir el README con la codificación UTF-8
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 
 setup(
     name='modulo_pablo',
-    packages=['modulo_pablo'],  # this must be the same as the name above
-    version='0.1.1',
-    description='Esta es la descripcion de mi paquete',
-    long_description=readme.read(),
+    packages=['modulo_pablo'],  # este debe ser el mismo que el nombre anterior
+    version='0.1.2',
+    description='Paquete creado con fines educativos. Mas informacion: github.com/Duz-Dev',
+    long_description=long_description,
     long_description_content_type='text/markdown',
     author='Ruben Chavez',
     author_email='pablo.dev.academy@gmail.com',
     # use the URL to the github repo
     url='https://github.com/Duz-Dev/modulo-pablo',
-    download_url='https://github.com/Duz-Dev/modulo-pablo/tarball/0.1',
+    download_url='https://github.com/Duz-Dev/modulo-pablo/tarball/0.1.2',
     keywords=['testing', 'logging', 'example'],
     classifiers=[
         "Programming Language :: Python :: 3",
